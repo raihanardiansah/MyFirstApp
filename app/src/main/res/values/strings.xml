@@ -5,4 +5,11 @@
     <string name="password_input">Masukkan Password</string>
     <string name="login_button">Login</string>
     <string name="register">Daftar"</string>
+    <string-array name="daftar_kota">
+        <item>Yogyakarta</item>
+        <item>Jakarta</item>
+        <item>Surabaya</item>
+        <item>Bandung</item>
+    </string-array>
+
 </resources>

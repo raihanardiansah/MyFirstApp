@@ -19,16 +19,23 @@ class HomeActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, DashboardFragment())
+                .commit()
+        }
+
         // Di dalam onCreate
-        val tvWelcomeMessage: TextView = findViewById(R.id.tv_welcome_message)
+//        val tvWelcomeMessage: TextView = findViewById(R.id.tv_welcome_message)
 
 
         // Mengambil data username dari Intent
-        val username = intent.getStringExtra("EXTRA_USERNAME")
+//        val username = intent.getStringExtra("EXTRA_USERNAME")
 
 
         // Menampilkan data ke TextView
-        tvWelcomeMessage.text = "Selamat Datang, $username!"
+//        tvWelcomeMessage.text = "Selamat Datang, $username!"
 
         // Buka Situs Web https://amikom.ac.id
         val btnOpenWebsite: Button = findViewById(R.id.btn_open_website)
@@ -41,5 +48,6 @@ class HomeActivity : AppCompatActivity() {
             // 2. Menjalankan Intent
             startActivity(intent)
         }
+
     }
 }
